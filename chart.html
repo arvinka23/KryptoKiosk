@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Chart</title>
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 2em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über mich</a></li>
+                <li><a href="chart.html">Charts</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Bitcoin Chart</h1>
+            <!-- TradingView Widget -->
+            <div class="tradingview-widget-container" style="width: 100%; height: 800px;">
+                <div id="tradingview_74048"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/symbols/BITFINEX-IOTUSD/" rel="noopener" target="_blank">
+                        <span class="blue-text">IOTUSD Chart</span>
+                    </a> by TradingView
+                </div>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "width": "100%",
+                        "height": "800",
+                        "symbol": "BINANCE:IOTAUSD",
+                        "interval": "D",
+                        "timezone": "Europe/Zurich",
+                        "theme": "Dark",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_side_toolbar": false,
+                        "allow_symbol_change": true,
+                        "studies": ["RSI@tv-basicstudies", "StochasticRSI@tv-basicstudies"],
+                        "container_id": "tradingview_74048"
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Meine Website über Kryptowährungen</p>
+    </footer>
+</body>
+</html>
+
